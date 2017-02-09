@@ -25,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this,Result.class);
                 EditText editText = (EditText) findViewById(R.id.first_number);
                 if(!editText.getText().toString().matches(number)){
-                    editText.setError(getString(R.string.error_empty));
+                    editText.setError(getString(R.string.error));
                     return;
                 }
                 intent.putExtra(EXTRA_FIRST_NUMBER, editText.getText().toString());
                 editText = (EditText) findViewById(R.id.second_number);
                 if(!editText.getText().toString().matches(number)){
-                    editText.setError(getString(R.string.error_empty));
+                    editText.setError(getString(R.string.error));
                     return;
                 }
                 intent.putExtra(EXTRA_SECOND_NUMBER, editText.getText().toString());

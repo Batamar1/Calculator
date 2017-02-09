@@ -20,11 +20,11 @@ public class Result extends AppCompatActivity {
         textView.setText(generateCalculatedString(firstNumber,secondNumber));
     }
 
-    private String generateCalculatedString(String firstNumber, String secondNumber){
-        String string = firstNumber + " + ";
-        if(secondNumber.matches("^-\\d+$")) string = string + "( " + secondNumber + " )";
-        else string += secondNumber;
-        string = string + " = " + (Integer.valueOf(firstNumber) + Integer.valueOf(secondNumber));
+    private StringBuilder generateCalculatedString(String firstNumber, String secondNumber){
+        StringBuilder string = new StringBuilder(firstNumber + " + ");
+        if(secondNumber.matches("^-\\d+$")) string.append("( " + secondNumber + " )");
+        else string.append(secondNumber);
+        string.append(" = " + (Integer.valueOf(firstNumber) + Integer.valueOf(secondNumber)));
         return string;
     }
 }
