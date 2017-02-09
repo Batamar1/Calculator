@@ -28,10 +28,19 @@ public class MainActivity extends AppCompatActivity {
                     editText.setError(getString(R.string.error));
                     return;
                 }
+                if(editText.getText().toString().length() > 9){
+                    editText.setError(getString(R.string.errorOverflow));
+                    return;
+                }
                 intent.putExtra(EXTRA_FIRST_NUMBER, editText.getText().toString());
+                
                 editText = (EditText) findViewById(R.id.second_number);
                 if(!editText.getText().toString().matches(number)){
                     editText.setError(getString(R.string.error));
+                    return;
+                }
+                if(editText.getText().toString().length() > 9){
+                    editText.setError(getString(R.string.errorOverflow));
                     return;
                 }
                 intent.putExtra(EXTRA_SECOND_NUMBER, editText.getText().toString());

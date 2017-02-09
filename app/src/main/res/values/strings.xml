@@ -6,4 +6,5 @@
     <string name="second_number_hint">Введите второе слагаемое</string>
     <string name="button_addition">Сложение</string>
     <string name="error">Введите число</string>
+    <string name="errorOverflow">Длинна числа не должна превышать 9 цифр!</string>
 </resources>
